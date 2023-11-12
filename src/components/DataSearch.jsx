@@ -10,7 +10,9 @@ export default function DataSearch() {
 			return resuladoFinal;
 		}
 
-		buscarDados().then((res) => setTarefas(res));
+		buscarDados()
+			.then((response) => setTarefas(response))
+			.catch((err) => console.log(err));
 	}, []);
 
 	return (
